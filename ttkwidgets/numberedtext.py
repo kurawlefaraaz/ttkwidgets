@@ -1,3 +1,9 @@
+"""
+Author: Faraaz Kurawle
+License: GNU GPLv3
+Source: This repository
+"""
+
 from tkinter import ttk
 import tkinter as tk
 
