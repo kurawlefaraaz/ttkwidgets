@@ -1,7 +1,18 @@
+"""
+Author: Faraaz Kurawle
+License: GNU GPLv3
+Source: This repository
+"""
+
 import tkinter as tk
 import tkinter.ttk as ttk
 
 class DynamicNotebook(ttk.Notebook):
+    """
+    Notebook widget with ablity to add or remove tabs in the runtime.
+
+    :param parent: parent widget of this widget.
+    """
     def __init__(self, parent):
         super().__init__(parent)
 
