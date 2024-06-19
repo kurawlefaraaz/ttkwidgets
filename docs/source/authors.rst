@@ -65,5 +65,5 @@ List of all the authors of widgets in this repository. Please note that this lis
 - `Faraaz Kurawle <https://github.com/kurawlefaraaz>`_
 
   * :class:`~ttkwidgets.DynamicNotebook`
-  * :class:`NumberedText`, `based on idea of [yelsayed]<https://stackoverflow.com/a/37087317/16187613>`
-  * :class:`EditableTreeview`, `based on idea of [dakov]<https://stackoverflow.com/a/18815802/16187613>`
+  * :class:`NumberedText`, based on idea of, `yelsayed <https://stackoverflow.com/a/37087317/16187613>`_
+  * :class:`EditableTreeview`, based on idea of, `dakov <https://stackoverflow.com/a/18815802/16187613>`_
