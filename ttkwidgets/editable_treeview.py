@@ -78,7 +78,7 @@ class PopupEntry(tk.Entry):
         self.textvar.set(value)
 
 class EditableTreeview(ttk.Treeview):
-    """Customized Treeview with editing feature
+    """Customized Treeview with cell editing feature
 
     :param parent: parent widget
     :type parent: widget
@@ -217,37 +217,3 @@ class EditableTreeview(ttk.Treeview):
                 current_row=current_row,
                 currentindex=currentindex,
             )
-    
-def demo():
-    root = tk.Tk()
-    root.geometry("620x200")
-
-    columns = ("attribute", "value")
-    data = {f"Demo {i}": f"Demo {i}" for i in range(1, 101)}
-
-    tree_frame = tk.Frame(root)
-    tree_frame.pack(expand=1, fill="both")
-
-    scrollbar = ttk.Scrollbar(tree_frame, orient=tk.VERTICAL)
-    scrollbar.pack(side="right", fill = "y")
-
-    tk.Label(tree_frame, text="Editable Treeview: All columns are editable").pack()
-    tree1 = EditableTreeview(
-        tree_frame, columns=columns, show=" tree", bind_key="<Double-Button-1>", data=data
-    )
-    tree1.pack(expand=1, fill="both", padx=20, pady=20)
-    scrollbar.configure(command=tree1.yview)
-
-    tk.Label(tree_frame, text="Editable Treeview: All columns are not editable").pack()
-    tree2 = EditableTreeview(
-        tree_frame, columns=columns, show="headings", bind_key="<Double-Button-1>", data=data, non_editable_columns=("#1", "#2")
-    )
-    tree2.pack(expand=1, fill="both", padx=20, pady=20)
-
-    tree1.configure(yscroll=scrollbar.set)
-
-    root.mainloop()
-
-
-if __name__ == "__main__":
-    demo()

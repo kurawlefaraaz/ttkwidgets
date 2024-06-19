@@ -69,13 +69,4 @@ class DynamicNotebook(ttk.Notebook):
         elif tab_name == "+":
             c = self.index("current")
             self.insert_frame(c - 1)
-
-def demo():
-    root = tk.Tk()
-    wksp =DynamicNotebook(root)
-    wksp.pack(fill="both", expand=1)
-    root.mainloop()
-
-if __name__ == "__main__":
-    demo()
       

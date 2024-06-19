@@ -17,8 +17,9 @@ class NumberedText(tk.Frame):
     param options: all valid tk.Text customization options.
         """
     def __init__(self, master, **options):
-        super().__init__(master, **options)
+        super().__init__(master)
 
+        self.options = options
         self.config(bg='red')
         style = ttk.Style(self)
         self.configure(bg="white")
@@ -34,7 +35,7 @@ class NumberedText(tk.Frame):
         self.textarea.config(spacing1=0, spacing2=0, spacing3=1)
         
     def scroll_text(self):
-        self.textarea = tk.Text(self, relief="flat", font="times 15")
+        self.textarea = tk.Text(self, relief="flat", font="times 15", **self.options)
 
         self.uniscrollbar["command"] = self.scroll_both
         self.textarea["yscrollcommand"] = self.update_scroll_both
@@ -111,10 +112,3 @@ class LineNumbers(tk.Listbox):
     def get_current_row(self):
         curr_row = int(self.textwidget.index("insert").split(".")[0])
         return (curr_row)
-
-def demo():
-    tk.Label(root, text = "NumberedText Widget Demo").pack()
-    NumberedText(root).pack()
-
-if __name__ == "__main__":
-    demo()
