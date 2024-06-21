@@ -42,3 +42,4 @@ This file contains a list of all the authors of widgets in this repository. Plea
   * `DynamicNotebook`
   * `NumberedText`, based on idea of [yelsayed](https://stackoverflow.com/a/37087317/16187613)
   * `EditableTreeview`, based on idea of [dakov](https://stackoverflow.com/a/18815802/16187613)
+  *  [found here](https://github.com/kurawlefaraaz/Tk-Themed-Utilities)
